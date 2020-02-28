@@ -11,17 +11,17 @@ class Frequency
 		String str;
 		char ch=0;
 		
-		System.out.println("\nEnter a String in Lower Case:");
+		System.out.println("\nEnter a String in Upper Case:");
 		str=venki.readLine();
 		p=str.length();
 		System.out.println("\nThe Frequency of The alphabets in order are:");
 		System.out.println("\nAlphabets : Frequency");
-		for(i=97;i<=122;i++)
+		for(i=65;i<=90;i++)
 		{	
 			c=0;ch=0;
 			for(j=0;j<p;j++)
 			{
-				ch=str.charAt(j);
+				ch=str.charAt(i);
 				if(ch==(char)i)
 				c=c+1;
 			}

@@ -1,48 +1,43 @@
 import java.io.*;
 import java.lang.*;
 class Color
-{public static void main(String[] args) throws IOException
-	{BufferedReader venki=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("\nEnter the number of Test Cases : ");
+{
+	public static void main(String[]args)throws IOException
+	{
+		BufferedReader venki=new BufferedReader(new InputStreamReader(System.in));
+		int i,r,g,b,stp,sum;
 		int t=Integer.parseInt(venki.readLine());
 		if(t>=1&&t<=10)
-		{do
-			{int i,sum=0,sum1=0,sum2=0,SUM=0,l=0;
-				System.out.println("\nEnter the number of rooms : ");
+		{
+			while(t-->0)
+			{
+				sum=0;r=0;b=0;g=0;stp=0;
 				int n=Integer.parseInt(venki.readLine());
-				if(n>=1&&n<=10)
-				{System.out.println("\nEnter the Colour Configuration of Roooms :");
-					String s=venki.readLine();
-					l=s.length();
-					for(i=0;i<n;i++)
-					{if(s.charAt(i)=='R')
-							sum+=1;
-						if(s.charAt(i)=='G')
-							sum1+=10;
-						if(s.charAt(i)=='B')
-							sum2+=6;
+				String s=venki.readLine();
+				char ch;
+				for(i=0;i<n;i++)
+				{
+					switch(s.charAt(i))
+					{
+						case 'B': b++;
+						break;
+						case 'G': g++;
+						break;
+						case 'R': r++;
+						break;
 					}
-					SUM=sum1+sum+sum2;
-					if(SUM==17)
-						System.out.println("2");
-					if(SUM==3)
-						System.out.println("0");
-					if(SUM==12)
-						System.out.println("1");
-					if(SUM==8)
-						System.out.println("1");
-					if(SUM==30)
-						System.out.println("0");
-					if(SUM==21)
-						System.out.println("1");
-					if(SUM==26)
-						System.out.println("1");
-					if(SUM==22)
-						System.out.println("1");
-					if(SUM==18)
-						System.out.println("0");
-					if(SUM==13)
-						System.out.println("1");}
-					t--;	
-			}while(t!=0);
-}}}
+				}
+				System.out.println("\nR:"+r+"\nG:"+g+"\nB:"+b);
+				if(r>g&&r>b)
+					stp=g+b;
+				else if(g>r&&g>b)
+					stp=r+b;
+				else if(b>g&&b>r)
+					stp=g+r;
+				System.out.println(stp);
+			}
+		}
+		else
+			System.out.println("");
+	}
+}

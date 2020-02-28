@@ -14,6 +14,7 @@ class Btreat
 				int n=Integer.parseInt(venki.readLine());
 				
 				int c[]=new int[n];
+				int c1[]=new int[n];
 				int i,j,temp=0,co=0,sum=0,Sum=0,SUM=0,echo=0,avg=0,p=0;
 				
 				if(n>=1&&n<=1000)
@@ -39,7 +40,6 @@ class Btreat
 						{
 							if(c[i]!=echo)
 							{
-
 								for(i=0;i<(n-1);i++)
 								{
 									for(j=0;j<((n-1)-i);j++)
@@ -56,7 +56,6 @@ class Btreat
 								System.out.println(" sum : "+sum+" Sum : "+Sum);
 								co++;
 								System.out.println(" CO : "+co);
-								
 								
 							}
 							

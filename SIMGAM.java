@@ -5,27 +5,27 @@ class SIMGAM
 {
 	public static void main(String[]args)throws IOException
 	{
-		BufferedReader venki=new BufferedReader(new InputStreamReader(System.in));
-		//
-		int t=Integer.parseInt(venki.readLine());
+		Scanner venki=new Scanner(System.in);
+		int t=venki.nextInt();
 		for(int T=0;T<t;T++)
 		{
-			int k=0,sum=0;
-			int n=Integer.parseInt(venki.readLine());
-			int c[]=new int[n],a[]=new int[100000][100000];
+			int k=0,x=0,i,j;
+			long sum=0;
+			int n=venki.nextInt();
+			int c[]=new int[n];long a[][]=new long[10][100000];
 			for(i=0;i<n;i++)
 			{
-				StringTokenizer tk = new StringTokenizer(venki.readLine());
-				c[i]=Integer.parseInt(tk.nextToken());
-				for(j=0;<c[i];j++)
+				k=0;
+				c[i]=venki.nextInt();
+				for(j=0;j<c[i];j++)
 				{
-					StringTokenizer tk1 = new StringTokenizer(venki.readLine());
-					a[i][j]=Integer.parseInt(tk1.nextToken());
-					if(j%2==0)
+					a[i][j]=venki.nextLong();
+					if(x%2==0)
 					{
 						sum+=a[i][k];
 						k++;
 					}
+					x++;
 				}
 			}
 			System.out.println(sum);

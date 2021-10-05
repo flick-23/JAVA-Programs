@@ -1,0 +1,23 @@
+import java.util.Scanner;
+    class factors{
+        public static void main(String args[]){
+            Scanner sc=new Scanner (System.in);
+            System.out.println("Enter 20 numbers");
+            int arr[]=new int [20];
+            for(int i=0;i<20;i++)
+               arr[i]=sc.nextInt();
+            int n=0,c=0;
+            for(int i=0;i<20;i++){
+                n=arr[i];
+                for(int j=1;j<n;j++){
+                    if(n%j==0){
+                        c++;
+                    }
+                    
+                }
+                if (c>=5){
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+    }
